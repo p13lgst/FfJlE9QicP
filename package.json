@@ -1,0 +1,31 @@
+{
+  "name": "glitch-react-express-example",
+  "version": "0.0.5",
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "client": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "start": "concurrently --kill-others \"npm run client\" \"npm run server\"",
+    "server": "wait-on tcp:3000 && nodemon server.js"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.2",
+    "express": "^4.18.1",
+    "concurrently": "^7.2.1",
+    "wait-on": "^6.0.1",
+    "body-parser": "^1.20.0",
+    "nodemon": "^2.0.16"
+  },
+  "devDependencies": {
+    "vite": "^2.4.4"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead"
+  ]
+}
